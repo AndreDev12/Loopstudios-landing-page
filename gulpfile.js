@@ -11,7 +11,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const terser = require('gulp-terser-js');
 
 // Images
-const webp = require('gulp-webp');
+// const webp = require('gulp-webp');
 
 function buildStyles() {
     return src('src/scss/app.scss')
@@ -19,7 +19,7 @@ function buildStyles() {
         	.pipe(sass().on('error', sass.logError))
         	.pipe(postcss([autoprefixer(),cssnano()]))
 			.pipe(sourcemaps.write('.'))
-        	.pipe(dest('build/css'))
+        	.pipe(dest('public/css'))
 };
 
 function buildScripts(){
@@ -27,29 +27,29 @@ function buildScripts(){
         	.pipe(sourcemaps.init())
         	.pipe(terser())
         	.pipe(sourcemaps.write('.'))
-        	.pipe(dest('build/js'));
+        	.pipe(dest('public/js'));
 }
 
 function images(){
-    return src('src/assets/images/*')
-            .pipe(dest('build/img'))
+    return src('src/assets/**/*')
+            .pipe(dest('public/img'))
 }
 
-function versionWebp(){
-	return src('src/assets/images/*.png')
-			.pipe(webp({quality: 50}))
-			.pipe(dest('build/img'))
-}
+// function versionWebp(){
+// 	return src('src/assets/images/*.png')
+// 			.pipe(webp({quality: 50}))
+// 			.pipe(dest('build/img'))
+// }
 
 function dev() {
     watch('src/scss/**/*.scss', buildStyles);
 	watch('src/js/*.js', buildScripts);
-    watch('src/assets/images/*', images);
+    watch('src/assets/**/*', images);
 };
 
 exports.buildStyles = buildStyles;
 exports.buildScripts = buildScripts;
 exports.dev = dev;
 exports.images = images;
-exports.versionWebp = versionWebp;
-exports.default = series(images, versionWebp, buildStyles, buildScripts, dev);
+// exports.versionWebp = versionWebp;
+exports.default = series(images, buildStyles, buildScripts, dev);
