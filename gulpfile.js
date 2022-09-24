@@ -10,9 +10,6 @@ const sourcemaps = require('gulp-sourcemaps');
 // JS
 const terser = require('gulp-terser-js');
 
-// Images
-// const webp = require('gulp-webp');
-
 function buildStyles() {
     return src('src/scss/app.scss')
 			.pipe(sourcemaps.init())
@@ -23,7 +20,7 @@ function buildStyles() {
 };
 
 function buildScripts(){
-    return src('src/js/*.js')
+    return src('src/js/app.js')
         	.pipe(sourcemaps.init())
         	.pipe(terser())
         	.pipe(sourcemaps.write('.'))
@@ -32,24 +29,18 @@ function buildScripts(){
 
 function images(){
     return src('src/assets/**/*')
-            .pipe(dest('public/img'))
+            .pipe(dest('public/assets'))
 }
-
-// function versionWebp(){
-// 	return src('src/assets/images/*.png')
-// 			.pipe(webp({quality: 50}))
-// 			.pipe(dest('build/img'))
-// }
 
 function dev() {
     watch('src/scss/**/*.scss', buildStyles);
-	watch('src/js/*.js', buildScripts);
+	watch('src/js/app.js', buildScripts);
     watch('src/assets/**/*', images);
 };
 
 exports.buildStyles = buildStyles;
 exports.buildScripts = buildScripts;
-exports.dev = dev;
 exports.images = images;
-// exports.versionWebp = versionWebp;
+exports.dev = dev;
+
 exports.default = series(images, buildStyles, buildScripts, dev);
