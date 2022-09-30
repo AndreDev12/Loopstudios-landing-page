@@ -1,5 +1,8 @@
 @use 'variables' as v;
 
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+
 html{
     box-sizing: border-box;
     font-size: 62.5%;
@@ -32,6 +35,10 @@ a{
 img{
     display: block;
     max-width: 100%;
+}
+
+ul{
+    list-style: none;
 }
 
 h1{
