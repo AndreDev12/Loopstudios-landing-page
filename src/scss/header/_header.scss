@@ -1,4 +1,5 @@
 @use '../base/image-paths' as p;
+@use '../base/variables' as v;
 
 .header{
     background-image: url(p.$mobile-header-image);
@@ -13,4 +14,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &__logo{
+        flex-basis: 14.5rem;
+    }
+}
+
+.menu-button{
+    flex-basis: 3rem;
+    height: 2.416rem;
+    &__span{
+        background-color: v.$color-white;
+        border-radius: 3rem;
+        display: block;
+        height: 0.3rem;
+        margin: 0.4rem auto;
+        transition: all 0.3s ease-in-out;
+        width: 2.3rem;
+    }
+}
+
+.menu-button:hover.active span:nth-child(1){
+    transform: translateY(0.6rem) rotate(45deg);
+}
+.menu-button:hover.active span:nth-child(2){
+    opacity: 0;
+}
+.menu-button:hover.active span:nth-child(3){
+    transform: translateY(-0.8rem) rotate(-45deg);
 }
