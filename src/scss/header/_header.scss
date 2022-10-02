@@ -42,3 +42,17 @@
 .menu-button:hover.active span:nth-child(3){
     transform: translateY(-0.8rem) rotate(-45deg);
 }
+
+.header-content{
+    border: 0.2rem solid v.$color-white;
+    padding: 2rem;
+    margin-top: 16rem;
+    &__title{
+        text-transform: uppercase;
+        color: v.$color-white;
+        font-weight: 300;
+        font-family: v.$font-family-josefin-sans;
+        font-size: 4.1rem;
+        line-height: 1.1;
+    }
+}
