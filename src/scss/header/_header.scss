@@ -4,9 +4,13 @@
     background-image: url(p.$mobile-header-image);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 30%;
-    // background-
-    height: 100vh;
+    height: 65rem;
     width: 100vw;
+    padding-top: 4rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
