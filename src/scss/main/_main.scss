@@ -1,4 +1,5 @@
 @use '../base/variables' as v;
+@use '../base/image-paths' as p;
 
 .main{
     padding-block: 9rem;
@@ -11,11 +12,8 @@
 }
 
 .abstract{
-    // padding-inline: 1.8rem;
     padding-inline: 2.2rem;
     &__title{
-        // font-size: 2.9rem;
-
         text-transform: uppercase;
         font-size: 3.3rem;
         text-align: center;
@@ -23,14 +21,34 @@
         line-height: 1;
     }
     &__paragraph{
-        // margin-top: 1.5rem; 
         color: v.$color-dark-gray;
         line-height: 1.5;
-        word-spacing: .4rem;
-        margin-top: 2rem;
-        font-size: 1.4rem;
+        word-spacing: .1rem;
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
         text-align: center;
         font-family: v.$font-family-alata;
         font-weight: 300;
     }
+}
+
+.creations{
+    margin-top: 8rem;
+    display: grid;
+    &__title{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 3.3rem;
+        font-weight: 300;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, minmax(10rem, 15rem));
+        margin-top: 3rem;
+    }
+}
+
+.card:nth-child(1){
+    background-image: url(p.$mobile-deep-earth-image);
 }
