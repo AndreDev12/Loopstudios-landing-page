@@ -9,6 +9,15 @@
     display: flex;
     flex-direction: column;
     row-gap: 4rem;
+    // &__figure{
+    //     background-image: url(p.$mobile-interactive-image);
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     height: 25rem;
+    //     @media (min-width: 1440px){
+    //         background-image: url(p.$desktop-interactive-image);
+    //     }
+    // }
 }
 
 .abstract{
@@ -49,6 +58,45 @@
     }
 }
 
+.card{
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
 .card:nth-child(1){
-    background-image: url(p.$mobile-deep-earth-image);
+    background-image: linear-gradient(to left, v.$color-dark-gray, v.$color-very-dark-gray) ,url(p.$mobile-deep-earth-image);
+    // background-image: linear-gradient(v.$color-very-dark-gray, v.$color-dark-gray), url(p.$mobile-deep-earth-image);
+    // background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+    //               url("../../media/examples/lizard.png");
+    @media (min-width: 1440px){
+        background-image: url(p.$desktop-deep-earth-image);
+    }
+}
+
+.card:nth-child(2){
+    background-image: url(p.$mobile-night-arcade-image);
+}
+
+.card:nth-child(3){
+    background-image: url(p.$mobile-soccer-team-image);
+}
+
+.card:nth-child(4){
+    background-image: url(p.$mobile-grid-image);
+}
+
+.card:nth-child(5){
+    background-image: url(p.$mobile-from-above-image);
+}
+
+.card:nth-child(6){
+    background-image: url(p.$mobile-pocket-borealis-image);
+}
+
+.card:nth-child(7){
+    background-image: url(p.$mobile-curiosity-image);
+}
+
+.card:nth-child(8){
+    background-image: url(p.$mobile-fisheye-image);
 }
