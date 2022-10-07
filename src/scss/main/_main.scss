@@ -53,50 +53,66 @@
     .cards{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, minmax(10rem, 15rem));
+        grid-template-rows: repeat(8, 12rem);
+        row-gap: 2rem;
         margin-top: 3rem;
     }
 }
 
 .card{
     background-repeat: no-repeat;
-    background-size: contain
+    position: relative; 
 }
 
-.card:nth-child(1){
-    background-image: linear-gradient(to left, v.$color-dark-gray, v.$color-very-dark-gray) ,url(p.$mobile-deep-earth-image);
-    // background-image: linear-gradient(v.$color-very-dark-gray, v.$color-dark-gray), url(p.$mobile-deep-earth-image);
-    // background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
-    //               url("../../media/examples/lizard.png");
+.card:nth-child(1)::before,
+.card:nth-child(2)::before,
+.card:nth-child(3)::before,
+.card:nth-child(4)::before,
+.card:nth-child(5)::before,
+.card:nth-child(6)::before,
+.card:nth-child(7)::before,
+.card:nth-child(8)::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+
+.card:nth-child(1)::before{
+    background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-deep-earth-image);
     @media (min-width: 1440px){
         background-image: url(p.$desktop-deep-earth-image);
     }
 }
 
-.card:nth-child(2){
+.card:nth-child(2)::before{
     background-image: url(p.$mobile-night-arcade-image);
 }
 
-.card:nth-child(3){
+.card:nth-child(3)::before{
     background-image: url(p.$mobile-soccer-team-image);
 }
 
-.card:nth-child(4){
+.card:nth-child(4)::before{
     background-image: url(p.$mobile-grid-image);
 }
 
-.card:nth-child(5){
+.card:nth-child(5)::before{
     background-image: url(p.$mobile-from-above-image);
 }
 
-.card:nth-child(6){
+.card:nth-child(6)::before{
     background-image: url(p.$mobile-pocket-borealis-image);
 }
 
-.card:nth-child(7){
+.card:nth-child(7)::before{
     background-image: url(p.$mobile-curiosity-image);
 }
 
-.card:nth-child(8){
+.card:nth-child(8)::before{
     background-image: url(p.$mobile-fisheye-image);
 }
