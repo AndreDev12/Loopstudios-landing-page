@@ -42,8 +42,9 @@
 }
 
 .creations{
-    margin-top: 8rem;
+    margin-top: 10rem;
     display: grid;
+    row-gap: 4rem;
     &__title{
         text-transform: uppercase;
         text-align: center;
@@ -55,64 +56,68 @@
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 12rem);
         row-gap: 2rem;
-        margin-top: 3rem;
     }
 }
 
 .card{
     background-repeat: no-repeat;
     position: relative; 
+    height: 100%;
+    &__name{
+        position: absolute;
+        color: v.$color-white;
+        text-transform: uppercase;
+        bottom: 2rem;
+        left: 2rem;
+        font-size: 2.3rem;
+        z-index: 10;
+        width: 12rem;
+    }
 }
 
-.card:nth-child(1)::before,
-.card:nth-child(2)::before,
-.card:nth-child(3)::before,
-.card:nth-child(4)::before,
-.card:nth-child(5)::before,
-.card:nth-child(6)::before,
-.card:nth-child(7)::before,
-.card:nth-child(8)::before{
+.card::before{
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
+    // top: 0;
+    // left: 0;
+    // z-index: 5;
     width: 100%;
     height: 100%;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.card:nth-child(1)::before{
+.card-link:nth-child(1) .card::before{
     background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-deep-earth-image);
     @media (min-width: 1440px){
         background-image: url(p.$desktop-deep-earth-image);
     }
 }
 
-.card:nth-child(2)::before{
-    background-image: url(p.$mobile-night-arcade-image);
+.card-link:nth-child(2) .card::before{
+    background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-night-arcade-image);
 }
 
-.card:nth-child(3)::before{
-    background-image: url(p.$mobile-soccer-team-image);
+.card-link:nth-child(3) .card::before{
+    background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-soccer-team-image);
 }
 
-.card:nth-child(4)::before{
-    background-image: url(p.$mobile-grid-image);
+.card-link:nth-child(4) .card::before{
+    background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-grid-image);
 }
 
-.card:nth-child(5)::before{
-    background-image: url(p.$mobile-from-above-image);
+.card-link:nth-child(5) .card::before{
+    background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-from-above-image);
 }
 
-.card:nth-child(6)::before{
-    background-image: url(p.$mobile-pocket-borealis-image);
+.card-link:nth-child(6) .card::before{
+    background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-pocket-borealis-image);
 }
 
-.card:nth-child(7)::before{
-    background-image: url(p.$mobile-curiosity-image);
+.card-link:nth-child(7) .card::before{
+    background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-curiosity-image);
 }
 
-.card:nth-child(8)::before{
-    background-image: url(p.$mobile-fisheye-image);
+.card-link:nth-child(8) .card::before{
+    background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-fisheye-image);
 }
