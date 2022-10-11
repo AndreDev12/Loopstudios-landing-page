@@ -1,0 +1,10 @@
+@use '../base/variables' as v;
+
+.footer{
+    background-color: v.$color-black;
+    padding: 3rem;
+    .footer-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
