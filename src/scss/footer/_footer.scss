@@ -2,9 +2,53 @@
 
 .footer{
     background-color: v.$color-black;
-    padding: 3rem;
+    padding: 5rem;
     .footer-wrapper{
         display: flex;
         flex-direction: column;
+        row-gap: 5rem;
+    }
+}
+
+.logo-nav{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    // align-items: center;
+    &__figure{
+        margin: 0 auto;
+        width: 14.5rem;
+    }
+}
+
+.nav{
+    .unordered-list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        text-align: center;
+        .link{
+            color: v.$color-white;
+            font-size: 1.3rem;
+            font-family: v.$font-family-alata;
+        }
+    }
+}
+
+.socials-copyright{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    .social-networks{
+        display: flex;
+        column-gap: 1.5rem;
+        align-items: center;
+    }
+    .copyright{
+        color: v.$color-very-dark-gray;
+        font-family: v.$font-family-alata;
+        font-size: 1.49rem;
+        text-align: center;
     }
 }
