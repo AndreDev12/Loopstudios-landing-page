@@ -1,7 +1,18 @@
+@use 'variables' as v;
+@use 'image-paths' as p;
 // .active{
 //     display: none;
 // }
 
 .low-brightness{
     filter: brightness(30%);
+}
+
+.black-background{
+    background-color: v.$color-black;
+    // background-image: ;
+}
+
+.background-image{
+    background-image: url(p.$mobile-header-image);
 }
