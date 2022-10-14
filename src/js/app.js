@@ -9,11 +9,11 @@ menuButton.addEventListener('click', showMobileMenu);
 function showMobileMenu(){
     if(menuButton.classList.contains('active')){
         this.classList.toggle('active');
-        header.classList.add('background-image');
+        // header.classList.add('background-image');
         return;
     }
     this.classList.toggle('active');
     // header.classList.add('black-background');
     body.classList.add('black-background');
-    header.classList.remove('background-image');
+    // header.classList.remove('background-image');
 }

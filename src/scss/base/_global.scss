@@ -19,6 +19,18 @@ body{
     background-color: v.$color-white;
     height: 100vh;
     width: 100vw;
+    position: relative;
+    z-index: 10;
+    // filter: brightness(30%);
+}
+
+body::before{
+    content: "";
+    display: block;
+    height: 100vh;
+    background-color: v.$color-black;
+    position: absolute;
+    width: 100%;
 }
 
 .container{
