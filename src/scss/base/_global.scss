@@ -25,12 +25,14 @@ body{
 }
 
 body::before{
+    // display: none;
     content: "";
     display: block;
     height: 100vh;
     background-color: v.$color-black;
-    position: absolute;
     width: 100%;
+    position: fixed;
+    z-index: 100;
 }
 
 .container{
