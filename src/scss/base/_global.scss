@@ -24,16 +24,16 @@ body{
     // filter: brightness(30%);
 }
 
-body::before{
-    // display: none;
-    content: "";
-    display: block;
-    height: 100vh;
-    background-color: v.$color-black;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-}
+// body::before{
+//     // display: none;
+//     content: "";
+//     display: block;
+//     height: 100vh;
+//     // background-color: v.$color-black;
+//     width: 100%;
+//     position: fixed;
+//     z-index: 100;
+// }
 
 .container{
     margin: 0 auto;

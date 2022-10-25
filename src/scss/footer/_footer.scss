@@ -10,11 +10,10 @@
     }
 }
 
-.logo-nav{
+.brand{
     display: flex;
     flex-direction: column;
     row-gap: 3rem;
-    // align-items: center;
     &__figure{
         margin: 0 auto;
         width: 14.5rem;
@@ -22,7 +21,7 @@
 }
 
 .footer-nav{
-    .unordered-list{
+    .list{
         display: flex;
         flex-direction: column;
         row-gap: 2rem;

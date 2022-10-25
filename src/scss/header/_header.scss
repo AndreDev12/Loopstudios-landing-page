@@ -23,9 +23,9 @@
 .menu-button{
     flex-basis: 3rem;
     height: 2.416rem;
-    @include m.desktop{
-        display: none;
-    }
+    // @include m.desktop{
+    //     display: none;
+    // }
     &__span{
         background-color: v.$color-white;
         border-radius: 3rem;
@@ -37,13 +37,13 @@
     }
 }
 
-.menu-button:hover.active span:nth-child(1){
+.menu-button.active span:nth-child(1){
     transform: translateY(0.6rem) rotate(45deg);
 }
-.menu-button:hover.active span:nth-child(2){
+.menu-button.active span:nth-child(2){
     opacity: 0;
 }
-.menu-button:hover.active span:nth-child(3){
+.menu-button.active span:nth-child(3){
     transform: translateY(-0.8rem) rotate(-45deg);
 }
 

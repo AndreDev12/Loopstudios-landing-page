@@ -14,8 +14,10 @@ function eventListeners(){
 function showMobileMenu(){
     if(menuButton.classList.contains('active')){
         this.classList.toggle('active');
+        console.log('Test 1');
         return;
     }
+    console.log('Test 2');
     this.classList.toggle('active');
     body.classList.add('black-background');
 }
