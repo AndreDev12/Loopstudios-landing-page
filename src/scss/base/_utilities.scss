@@ -17,3 +17,18 @@
 .background-image{
     background-image: url(p.$mobile-header-image);
 }
+
+// .shadow{
+//     content: '';
+//     background-color: v.$color-black;
+//     position: fixed;
+//     height: 100vh;
+//     width: 100%;
+//     z-index: 20;
+//     top: 0;
+//     left: 0;
+// }
+
+.fixed{
+    position: fixed;
+}

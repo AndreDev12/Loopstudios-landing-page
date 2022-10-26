@@ -14,10 +14,14 @@ function eventListeners(){
 function showMobileMenu(){
     if(menuButton.classList.contains('active')){
         this.classList.toggle('active');
-        console.log('Test 1');
+        // body.classList.remove('black-background');
         return;
     }
-    console.log('Test 2');
     this.classList.toggle('active');
-    body.classList.add('black-background');
+    const response = window.getComputedStyle(document.querySelector('.header', '::before'));
+    // response.position = "fixed";
+    // response.classList.add('fixed');
+    console.log(response.setProperty);
+    // headerbefore.classList.add('fixed');
+    // body.classList.add('black-background');
 }
