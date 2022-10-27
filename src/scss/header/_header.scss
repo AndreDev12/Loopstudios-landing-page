@@ -11,17 +11,17 @@
     padding-top: 4rem;
     // z-index: 100;
     // position: absolute;
-    &::before{
-        content: '';
-        background-color: v.$color-black;
-        // position: fixed;
-        // display: block;
-        height: 100vh;
-        width: 100%;
-        z-index: 20;
-        top: 0;
-        left: 0;
-    }
+    // &::before{
+    //     content: '';
+    //     background-color: v.$color-black;
+    //     position: fixed;
+    //     display: block;
+    //     height: 100vh;
+    //     width: 100%;
+    //     z-index: 20;
+    //     top: 0;
+    //     left: 0;
+    // }
 }
 
 .navbar{
@@ -33,7 +33,7 @@
     }
 }
 
-.menu-button{
+.hamburguer-menu{
     flex-basis: 3rem;
     height: 2.416rem;
     // @include m.desktop{
@@ -50,13 +50,13 @@
     }
 }
 
-.menu-button.active span:nth-child(1){
+.hamburguer-menu.active span:nth-child(1){
     transform: translateY(0.6rem) rotate(45deg);
 }
-.menu-button.active span:nth-child(2){
+.hamburguer-menu.active span:nth-child(2){
     opacity: 0;
 }
-.menu-button.active span:nth-child(3){
+.hamburguer-menu.active span:nth-child(3){
     transform: translateY(-0.8rem) rotate(-45deg);
 }
 
