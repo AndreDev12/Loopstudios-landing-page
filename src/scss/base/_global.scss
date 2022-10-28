@@ -18,10 +18,10 @@ html{
 body{
     background-color: v.$color-white;
     height: 100vh;
-    // height: auto;
     width: 100vw;
-    // position: relative;
-    z-index: 30;
+    position: relative;
+    // height: auto;
+    // z-index: 30;
     // filter: brightness(30%);
 }
 
