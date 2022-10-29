@@ -53,17 +53,20 @@
 
 .header-nav{
     position: absolute;
+    // position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     opacity: 0;
     z-index: 10;
-    // width: 100vw;
-    min-height: 100vh;
     padding-top: 20rem;
     padding-bottom: 10rem;
     background-color: v.$color-black;
     transition: .5s ease-out;
+    // width: 100vw;
+    // min-height: 100vh;
     &--active{
         opacity: 1;
     }

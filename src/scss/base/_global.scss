@@ -6,7 +6,8 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;
-    width: 100vw;
+    // line-height: unset;
+    // width: 100vw;
 }
 
 *,*:before,*:after{
@@ -17,24 +18,11 @@ html{
 
 body{
     background-color: v.$color-white;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    // height: auto;
-    // z-index: 30;
-    // filter: brightness(30%);
+    // height: 100vh;
+    // width: 100vw;
+    // position: relative;
+    // overflow-x: hidden;
 }
-
-// body::before{
-//     // display: none;
-//     content: "";
-//     display: block;
-//     height: 100vh;
-//     // background-color: v.$color-black;
-//     width: 100%;
-//     position: fixed;
-//     z-index: 20;
-// }
 
 .container{
     margin: 0 auto;
