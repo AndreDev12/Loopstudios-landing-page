@@ -18,6 +18,9 @@ html{
 
 body{
     background-color: v.$color-white;
+    &--overflow{
+        overflow: hidden;
+    }
     // height: 100vh;
     // width: 100vw;
     // position: relative;
