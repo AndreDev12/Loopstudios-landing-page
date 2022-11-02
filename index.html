@@ -21,7 +21,7 @@
             <span class="hamburguer-menu__span"></span>
           </div>
           <nav class="header-nav">
-            <ul class="header-nav__links">
+            <ul class="header-nav__links container">
               <li class="header-nav__link"><a href="/">About</a></li>
               <li class="header-nav__link"><a href="/">Careers</a></li>
               <li class="header-nav__link"><a href="/">Events</a></li>
@@ -31,9 +31,11 @@
           </nav>
         </div>
       </div>
-      <div class="header-content container">
-        <h1 class="header-content__title">Immersive experiences that deliver</h1>
-      </div>
+      <section class="header-wrapper container">
+        <div class="header-content">
+          <h1 class="header-content__title">Immersive experiences that deliver</h1>
+        </div>
+      </section>
     </header>
     <main class="main">
       <div class="container">
@@ -90,16 +92,18 @@
               </figure>  
             </a>
           </div>
-          <button class="creations__submit" type="submit">See all</button>
+          <a class="creations__submit" href="/">See all</a>
         </section>
       </div>
     </main>
     <footer class="footer">
       <div class="footer-wrapper">
         <div class="brand">
-          <figure class="brand__figure">
-            <img class="brand-img" src="./src/assets/logos/logo.svg" alt="Footer logo">
-          </figure>
+          <a class="brand__logo" href="/">
+            <figure class="brand__figure">
+              <img class="brand-img" src="./src/assets/logos/logo.svg" alt="Footer logo">
+            </figure>
+          </a>
           <nav class="footer-nav">
             <ul class="list">
               <li><a class="link" href="/">About</a></li>
