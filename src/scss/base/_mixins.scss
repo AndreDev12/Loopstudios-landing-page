@@ -1,7 +1,13 @@
 @use 'variables' as v;
 
-@mixin mobile{
-    @media screen and (min-width: $media-queries-mobile){
+@mixin mobile-small{
+    @media screen and (max-width: v.$media-queries-mobile-small){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media screen and (min-width: v.$media-queries-tablet){
         @content;
     }
 }

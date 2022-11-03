@@ -1,7 +1,9 @@
 $font-family-alata: 'Alata', sans-serif;
 $font-family-josefin-sans: 'Josefin Sans', sans-serif;
 
-$media-queries-mobile: 375px;
+$media-queries-mobile-small: 350px;
+// $media-queries-mobile: 375px;
+$media-queries-tablet: 700px;
 $media-queries-desktop: 1440px;
 
 $color-white: hsl(0, 0%, 100%);

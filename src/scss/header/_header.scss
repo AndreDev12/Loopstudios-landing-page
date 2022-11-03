@@ -31,13 +31,11 @@
     flex-basis: 3rem;
     height: 2.416rem;
     position: relative;
-    // position: fixed;
     right: 0;
-    // top: 0;
     z-index: 30;
-    // @include m.desktop{
-    //     display: none;
-    // }
+    @include m.tablet{
+        display: none;
+    }
     &--fixed{
         position: fixed;
     }
@@ -63,7 +61,6 @@
 }
 
 .header-nav{
-    // position: absolute;
     position: fixed;
     top: 0;
     left: 0;
@@ -71,39 +68,61 @@
     bottom: 0;
     width: 100%;
     opacity: 0;
-    // z-index: 20;
     z-index: -10;
     padding-top: 20rem;
     padding-bottom: 10rem;
     background-color: v.$color-black;
     transition: .3s ease;
+    @include m.tablet{
+        background-color: initial;
+        position: initial;
+        opacity: 1;
+        padding: unset;
+    }
     &--active{
         opacity: 1;
         z-index: 20;
-        // position: fixed;
     }
-    // @include m.desktop{
-    //     display: block;
-    // }
 }
 
 .header-nav__links{
-    // padding-left: 2rem;
-    // padding-inline: 2rem;
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
+    @include m.tablet{
+        flex-direction: row;
+        column-gap: 3rem;
+        margin: 0;
+    }
 }
 
 .header-nav__link{
+    position: relative;
+    &::after{
+        content: '';
+        width: 100%;
+        transform: scale(0);
+        height: 0.2rem;
+        background-color: v.$color-white;
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        transition: 0.3s ease;
+    }
+    &:hover::after{
+        transform: scale(1);
+    }
     a{
         color: v.$color-white;
         font-size: 2rem;
         text-decoration: none;
         text-transform: uppercase;
         font-family: v.$font-family-josefin-sans;
-        // line-height: 3.25rem;
-        // transition: .3s;
+        @include m.tablet{
+            text-transform: capitalize;
+            font-family: v.$font-family-alata;
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -120,7 +139,10 @@
         font-family: v.$font-family-josefin-sans;
         font-size: 4rem;
         line-height: 1;
-        @media screen and (max-width: 350px){
+        // @media screen and (max-width: 350px){
+        //     font-size: 3rem;
+        // }
+        @include m.mobile-small{
             font-size: 3rem;
         }
     }
