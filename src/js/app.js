@@ -2,16 +2,12 @@ import '../scss/app.scss';
 
 const hamburguerMenu = document.querySelector('.hamburguer-menu');
 const headerNav= document.querySelector('.header-nav');
-// const headerNavLink = document.querySelector('.header-nav__link');
 
 eventListeners();
 function eventListeners(){
     hamburguerMenu.addEventListener('click', showMobileMenu);
-    document.addEventListener('click', e => {
-        if(e.target.classList.contains('header-nav__link')){
-           e.preventDefault();
-        console.log('Click en header nav link');
-       }
+    headerNav.addEventListener('click', e => {
+        e.preventDefault();
     })
 }
 

@@ -131,7 +131,10 @@
     padding: 2.1rem 3.3rem 1.1rem 2.4rem;
     margin-top: 16.3rem;
     max-width: 35rem;
-    // margin-left: 0;
+    @include m.tablet{
+        max-width: 50rem;
+        padding: 3rem;
+    }
     &__title{
         text-transform: uppercase;
         color: v.$color-white;
@@ -144,6 +147,9 @@
         // }
         @include m.mobile-small{
             font-size: 3rem;
+        }
+        @include m.tablet{
+            font-size: 5rem;
         }
     }
 }
