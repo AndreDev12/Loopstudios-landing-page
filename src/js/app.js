@@ -1,14 +1,16 @@
 import '../scss/app.scss';
 
 const hamburguerMenu = document.querySelector('.hamburguer-menu');
-const headerNav= document.querySelector('.header-nav');
+const headerNav = document.querySelector('.header-nav');
 
 eventListeners();
 function eventListeners(){
     hamburguerMenu.addEventListener('click', showMobileMenu);
     headerNav.addEventListener('click', e => {
-        e.preventDefault();
-    })
+        if(window.innerWidth >= 700){
+            e.preventDefault();
+        }
+    });
 }
 
 function showMobileMenu(){

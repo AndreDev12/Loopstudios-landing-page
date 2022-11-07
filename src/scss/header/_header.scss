@@ -98,16 +98,18 @@
 
 .header-nav__link{
     position: relative;
-    &::after{
-        content: '';
-        width: 100%;
-        transform: scale(0);
-        height: 0.2rem;
-        background-color: v.$color-white;
-        position: absolute;
-        bottom: -0.5rem;
-        left: 0;
-        transition: 0.3s ease;
+    @include m.tablet{
+        &::after{
+            content: '';
+            width: 100%;
+            transform: scale(0);
+            height: 0.2rem;
+            background-color: v.$color-white;
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            transition: 0.3s ease;
+        }
     }
     &:hover::after{
         transform: scale(1);

@@ -12,21 +12,36 @@
     row-gap: 4rem;
     max-width: 52rem;
     margin: 0 auto;
+    // z-index: 10;
     @include m.tablet{
         flex-direction: row;
+        max-width: none;
+        position: relative;
     }
     &__figure{
         @include m.tablet{
-            flex-basis: 40rem;
+            // flex-basis: 40rem;
+            // flex: 1 0 0;
+            flex-basis: 50%;
         }
         &-img{
-            width: 100%;
+            // width: 100%;
+            height: 100%;
         }
     }
 }
 
 .abstract{
     padding-inline: 2.2rem;
+    @include m.tablet{
+        padding: 3rem 0 0 3.6rem;
+        position: absolute;
+        background-color: v.$color-white;
+        width: 61%;
+        height: 65%;
+        right: 0;
+        bottom: 0;
+    }
     &__title{
         text-transform: uppercase;
         font-size: 3.3rem;
@@ -34,6 +49,10 @@
         font-weight: 300;
         line-height: 1;
         font-family: v.$font-family-josefin-sans;
+        @include m.tablet{
+            font-size: 2.5rem;
+            text-align: left;
+        }
     }
     &__paragraph{
         color: v.$color-dark-gray;
@@ -44,6 +63,11 @@
         text-align: center;
         font-family: v.$font-family-alata;
         font-weight: 300;
+        @include m.tablet{
+            font-size: 1.1rem;
+            text-align: left;
+            word-spacing: initial;
+        }
     }
 }
 
