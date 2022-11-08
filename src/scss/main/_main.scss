@@ -22,7 +22,8 @@
         @include m.tablet{
             // flex-basis: 40rem;
             // flex: 1 0 0;
-            flex-basis: 50%;
+            // flex-basis: 47%;
+            flex-basis: 65%;
         }
         &-img{
             // width: 100%;
@@ -34,10 +35,11 @@
 .abstract{
     padding-inline: 2.2rem;
     @include m.tablet{
-        padding: 3rem 0 0 3.6rem;
+        padding: 3.8rem 1rem 0 3rem;
         position: absolute;
         background-color: v.$color-white;
-        width: 61%;
+        // width: 63%;
+        width: 49%;
         height: 65%;
         right: 0;
         bottom: 0;
@@ -50,8 +52,10 @@
         line-height: 1;
         font-family: v.$font-family-josefin-sans;
         @include m.tablet{
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             text-align: left;
+            max-width: 36rem;
+            // width: 28rem;
         }
     }
     &__paragraph{
@@ -64,9 +68,14 @@
         font-family: v.$font-family-alata;
         font-weight: 300;
         @include m.tablet{
-            font-size: 1.1rem;
+            // font-size: 1.1rem;
+            font-size: 1rem;
             text-align: left;
             word-spacing: initial;
+            // margin-top: 0.5rem;  
+        }
+        @media screen and (min-width: 900px){
+            font-size: 1.4rem;
         }
     }
 }
@@ -97,6 +106,10 @@
             column-gap: 2rem;
         }
     }
+}
+
+.card-link:hover .card::before{
+    opacity: 0.25;
 }
 
 .cards .card-link:nth-of-type(5) .card__name{
