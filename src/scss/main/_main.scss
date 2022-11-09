@@ -9,9 +9,9 @@
 .about-content{
     display: flex;
     flex-direction: column;
-    row-gap: 4rem;
-    max-width: 52rem;
     margin: 0 auto;
+    max-width: 52rem;
+    row-gap: 4rem;
     // z-index: 10;
     @include m.tablet{
         flex-direction: row;
@@ -35,38 +35,42 @@
 .abstract{
     padding-inline: 2.2rem;
     @include m.tablet{
+        background-color: v.$color-white;
+        bottom: 0;
+        height: 65%;
         padding: 3.8rem 1rem 0 3rem;
         position: absolute;
-        background-color: v.$color-white;
-        // width: 63%;
-        width: 49%;
-        height: 65%;
         right: 0;
-        bottom: 0;
+        width: 49%;
+    }
+    @include m.laptop{
+        padding: 8rem 0 0 9rem;
     }
     &__title{
-        text-transform: uppercase;
+        font-family: v.$font-family-josefin-sans;
         font-size: 3.3rem;
-        text-align: center;
         font-weight: 300;
         line-height: 1;
-        font-family: v.$font-family-josefin-sans;
+        text-align: center;
+        text-transform: uppercase;
         @include m.tablet{
             font-size: 2.7rem;
-            text-align: left;
             max-width: 36rem;
-            // width: 28rem;
+            text-align: left;
+        }
+        @include m.laptop{
+            font-size: 3.5rem;
         }
     }
     &__paragraph{
         color: v.$color-dark-gray;
-        line-height: 1.5;
-        word-spacing: .1rem;
-        margin-top: 1.5rem;
-        font-size: 1.5rem;
-        text-align: center;
         font-family: v.$font-family-alata;
+        font-size: 1.5rem;
         font-weight: 300;
+        line-height: 1.5;
+        margin-top: 1.5rem;
+        text-align: center;
+        word-spacing: .1rem;
         @include m.tablet{
             // font-size: 1.1rem;
             font-size: 1rem;
@@ -77,21 +81,27 @@
         @media screen and (min-width: 900px){
             font-size: 1.4rem;
         }
+        @include m.laptop{
+            font-size: 1.3rem;
+        }
     }
 }
 
 .creations{
-    margin-top: 10rem;
     display: grid;
+    margin-top: 10rem;
     row-gap: 4rem;
     &__title{
-        text-transform: uppercase;
-        text-align: center;
+        font-family: v.$font-family-josefin-sans;
         font-size: 3.3rem;
         font-weight: 300;
-        font-family: v.$font-family-josefin-sans;
+        text-align: center;
+        text-transform: uppercase;
         @include m.tablet{
             text-align: left;
+        }
+        @include m.laptop{
+            font-size: 3.5rem;
         }
     }
     .cards{
@@ -100,10 +110,10 @@
         grid-template-rows: repeat(8, 12rem);
         row-gap: 2rem;
         @include m.tablet{
+            column-gap: 2rem;
+            grid-column: 1/3;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(4, 15rem);
-            grid-column: 1/3;
-            column-gap: 2rem;
         }
     }
 }
@@ -117,33 +127,33 @@
 }
 
 .card{
-    background-repeat: no-repeat;
-    position: relative; 
+    background-repeat: no-repeat; 
     height: 100%;
+    position: relative;
     &__name{
-        position: absolute;
-        color: v.$color-white;
-        text-transform: uppercase;
         bottom: 2rem;
-        left: 2rem;
-        font-size: 2.4rem;
-        z-index: 10;
-        width: 11rem;
-        line-height: 1;
+        color: v.$color-white;
         font-family: v.$font-family-josefin-sans;
+        font-size: 2.4rem;
+        left: 2rem;
+        line-height: 1;
+        position: absolute;
+        text-transform: uppercase;
+        width: 11rem;
+        z-index: 10;
     }
 }
 
 .card::before{
+    background-repeat: no-repeat;
+    background-size: cover;
     content: "";
+    height: 100%;
     position: absolute;
     // top: 0;
     // left: 0;
     // z-index: 5;
     width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .card-link:nth-child(1) .card::before{
@@ -182,24 +192,24 @@
 }
 
 .creations__submit{
-    border: 0.2rem solid v.$color-very-dark-gray;
-    text-transform: uppercase;
-    padding: 1.2rem 3rem;
     background-color: v.$color-white;
-    margin: 0 auto;
-    font-size: 1.3rem;
-    width: 16rem;
-    font-weight: bolder;
-    word-spacing: 0.1rem;
-    letter-spacing: 0.3rem;
-    height: 4rem;
-    margin-top: -1rem;
+    border: 0.2rem solid v.$color-very-dark-gray;
     font-family: v.$font-family-alata;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    height: 4rem;
+    letter-spacing: 0.3rem;
+    margin: 0 auto;
+    margin-top: -1rem;
+    padding: 1.2rem 3rem;
     text-align: center;
+    text-transform: uppercase;
+    width: 16rem;
+    word-spacing: 0.1rem;
     @include m.tablet{
         grid-column: 2/3;
         grid-row: 1/2;
-        margin-top: 0;
         margin-right: 0;
+        margin-top: 0;
     }
 }
