@@ -45,6 +45,7 @@
     }
     @include m.laptop{
         padding: 8rem 0 0 9rem;
+        width: 60%;
     }
     &__title{
         font-family: v.$font-family-josefin-sans;
@@ -82,7 +83,8 @@
             font-size: 1.4rem;
         }
         @include m.laptop{
-            font-size: 1.3rem;
+            // font-size: 1.3rem;   
+            font-size: 1.5rem;
         }
     }
 }

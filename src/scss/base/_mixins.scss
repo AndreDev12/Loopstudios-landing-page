@@ -19,7 +19,7 @@
 }
 
 @mixin desktop{
-    @media screen and (min-width: $media-queries-desktop){
+    @media screen and (min-width: v.$media-queries-desktop){
         @content;
     }
 }
