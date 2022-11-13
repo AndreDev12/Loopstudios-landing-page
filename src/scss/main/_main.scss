@@ -148,18 +148,25 @@
             grid-template-rows: repeat(4, 15rem);
         }
         @include m.desktop{
+            gap: 2.7rem;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 40rem);
+            grid-template-rows: repeat(2, 45rem);
         }
     }
+}
+
+.cards .card-link:nth-of-type(5) .card__name{
+    width: 13rem;
 }
 
 .card-link:hover .card::before{
     opacity: 0.25;
 }
 
-.cards .card-link:nth-of-type(5) .card__name{
-    width: 13rem;
+.card-link:hover .card__name{
+    color: v.$color-black;
+    // font-size: 3rem;
+    // font-weight: 300;
 }
 
 .card{
@@ -177,6 +184,15 @@
         text-transform: uppercase;
         width: 11rem;
         z-index: 10;
+        @include m.desktop{
+            bottom: 3rem;
+            // font-size: 3.2rem;
+            font-weight: bold;
+            // font-weight: 300;
+            left: 4rem;
+            letter-spacing: .043rem;
+            // Continue
+        }
     }
 }
 
@@ -190,10 +206,10 @@
     // left: 0;
     // z-index: 5;
     width: 100%;
-    @include m.desktop{
-        // background-size: contain;
-        background-size: cover;
-    }
+    // @include m.desktop{
+    //     // background-size: contain;
+    //     background-size: cover;
+    // }
 }
 
 .card-link:nth-child(1) .card::before{
