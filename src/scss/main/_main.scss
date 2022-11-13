@@ -191,43 +191,65 @@
     // z-index: 5;
     width: 100%;
     @include m.desktop{
-        background-size: contain;
+        // background-size: contain;
+        background-size: cover;
     }
 }
 
 .card-link:nth-child(1) .card::before{
     background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-deep-earth-image);
-    @media (min-width: 1440px){
+    @include m.desktop{
         background-image: url(p.$desktop-deep-earth-image);
     }
 }
 
 .card-link:nth-child(2) .card::before{
     background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-night-arcade-image);
+    @include m.desktop{
+        background-image: url(p.$desktop-night-arcade-image);
+    }
 }
 
 .card-link:nth-child(3) .card::before{
     background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-soccer-team-image);
+    @include m.desktop{
+        background-image: url(p.$desktop-soccer-team-image);
+    }
 }
 
 .card-link:nth-child(4) .card::before{
     background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-grid-image);
+    @include m.desktop{
+        background-image: url(p.$desktop-grid-image);
+    }
 }
 
 .card-link:nth-child(5) .card::before{
     background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-from-above-image);
+    @include m.desktop{
+        background-image: url(p.$desktop-from-above-image);
+    }
 }
 
 .card-link:nth-child(6) .card::before{
     background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-pocket-borealis-image);
+    @include m.desktop{
+        background-image: url(p.$desktop-pocket-borealis-image);
+    }
 }
 
 .card-link:nth-child(7) .card::before{
     background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-curiosity-image);
+    @include m.desktop{
+        background-image: url(p.$desktop-curiosity-image);
+    }
 }
 
 .card-link:nth-child(8) .card::before{
     background-image: linear-gradient(180deg,rgba(0,0,0,.0001),rgba(0,0,0,.601863)), url(p.$mobile-fisheye-image);
+    @include m.desktop{
+        background-image: url(p.$desktop-fisheye-image);
+    }
 }
 
 .creations__submit{
