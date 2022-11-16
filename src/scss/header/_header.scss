@@ -1,6 +1,6 @@
 @use '../base/image-paths' as p;
-@use '../base/variables' as v;
 @use '../base/mixins' as m;
+@use '../base/variables' as v;
 
 .header{
     background-image: url(p.$mobile-header-image);
@@ -25,13 +25,9 @@
     &__logo{
         flex-basis: 14.5rem;
         position: relative;
-        // position: fixed;
         z-index: 30;
         @include m.desktop{
             flex-basis: 20rem;
-        }
-        &--fixed{
-            position: fixed;
         }
     }
 }
@@ -44,9 +40,6 @@
     z-index: 30;
     @include m.tablet{
         display: none;
-    }
-    &--fixed{
-        position: fixed;
     }
     &__span{
         background-color: v.$color-white;
@@ -161,9 +154,6 @@
         font-weight: 300;
         line-height: 1;
         text-transform: uppercase;
-        // @media screen and (max-width: 350px){
-        //     font-size: 3rem;
-        // }
         @include m.mobile-small{
             font-size: 3rem;
         }

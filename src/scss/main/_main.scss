@@ -1,6 +1,6 @@
-@use '../base/variables' as v;
 @use '../base/image-paths' as p;
 @use '../base/mixins' as m;
+@use '../base/variables' as v;
 
 .main{
     padding-block: 9rem;
@@ -15,7 +15,6 @@
     margin: 0 auto;
     max-width: 52rem;
     row-gap: 4rem;
-    // z-index: 10;
     @include m.tablet{
         flex-direction: row;
         max-width: none;
@@ -23,16 +22,9 @@
     }
     &__figure{
         @include m.tablet{
-            // flex-basis: 40rem;
-            // flex: 1 0 0;
-            // flex-basis: 47%;
             flex-basis: 65%;
         }
-        // @include m.desktop{
-        //     flex-basis: 70%;
-        // }
         &-img{
-            // width: 100%;
             height: 100%;
             @include m.desktop{
                 width: 100%;
@@ -46,7 +38,6 @@
     @include m.tablet{
         background-color: v.$color-white;
         bottom: 0;
-        // flex-basis: 49%;
         height: 65%;
         padding: 3.8rem 1rem 0 3rem;
         position: absolute;
@@ -54,12 +45,10 @@
         width: 49%;
     }
     @include m.laptop{
-        // flex-basis: 60%;
         padding: 8rem 0 0 9rem;
         width: 60%;
     }
     @include m.desktop{
-        // flex-basis: 50%;
         padding: 10.5rem 0 0 10.9rem;
         width: 50%;
     }
@@ -93,17 +82,14 @@
         text-align: center;
         word-spacing: .1rem;
         @include m.tablet{
-            // font-size: 1.1rem;
             font-size: 1rem;
             text-align: left;
-            word-spacing: initial;
-            // margin-top: 0.5rem;  
+            word-spacing: initial; 
         }
         @media screen and (min-width: 900px){
             font-size: 1.4rem;
         }
-        @include m.laptop{
-            // font-size: 1.3rem;   
+        @include m.laptop{  
             font-size: 1.5rem;
         }
         @include m.desktop{
@@ -165,8 +151,6 @@
 
 .card-link:hover .card__name{
     color: v.$color-black;
-    // font-size: 3rem;
-    // font-weight: 300;
 }
 
 .card{
@@ -186,12 +170,9 @@
         z-index: 10;
         @include m.desktop{
             bottom: 3rem;
-            // font-size: 3.2rem;
             font-weight: bold;
-            // font-weight: 300;
             left: 4rem;
             letter-spacing: .043rem;
-            // Continue
         }
     }
 }
@@ -202,14 +183,7 @@
     content: "";
     height: 100%;
     position: absolute;
-    // top: 0;
-    // left: 0;
-    // z-index: 5;
     width: 100%;
-    // @include m.desktop{
-    //     // background-size: contain;
-    //     background-size: cover;
-    // }
 }
 
 .card-link:nth-child(1) .card::before{
@@ -271,7 +245,6 @@
 .creations__submit{
     background-color: v.$color-white;
     border: 0.1rem solid v.$color-very-dark-gray;
-    // border: 0.2rem solid v.$color-very-dark-gray;
     color: v.$color-black;
     font-family: v.$font-family-alata;
     font-size: 1.3rem;

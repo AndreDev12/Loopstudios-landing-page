@@ -1,12 +1,10 @@
-@use '../base/variables' as v;
 @use '../base/mixins' as m;
+@use '../base/variables' as v;
 
 .footer{
     background-color: v.$color-black;
     padding: 5rem;
     @include m.laptop{
-        // padding: 1rem 4rem;
-        // padding: 2rem 0;
         padding: 2rem 0 2rem 0;
     }
     .footer-wrapper{
@@ -17,7 +15,6 @@
             flex-direction: row;
             justify-content: space-between;
             margin: 0 auto;
-            // max-width: 150rem;
             max-width: 111rem;
             width: 88%;
         }
@@ -51,6 +48,9 @@
             column-gap: 2rem;
             flex-direction: row;
         }
+        @include m.desktop{
+            column-gap: 3.5rem;
+        }
         .link{
             color: v.$color-white;
             font-family: v.$font-family-alata;
@@ -58,6 +58,28 @@
             @include m.laptop{
                 font-size: 1.5rem;
             }
+        }
+    }
+}
+
+.list{
+    li{
+        position: relative;
+        &::after{
+            @include m.laptop{
+                background-color: v.$color-white;
+                bottom: -1rem;
+                content: '';
+                height: 0.2rem;
+                left: 0;
+                position: absolute;
+                transform: scale(0);
+                transition: 0.3s ease;
+                width: 100%;
+            }
+        }
+        &:hover::after{
+            transform: scale(1);
         }
     }
 }
@@ -71,6 +93,9 @@
         align-items: flex-end;
         justify-content: space-around;
         row-gap: 1rem;
+    }
+    @include m.desktop{
+        row-gap: 2rem;
     }
     .social-networks{
         align-items: center;
@@ -87,6 +112,28 @@
         text-align: center;
         @include m.laptop{
             font-size: 1.5rem;
+        }
+    }
+}
+
+.social-networks{
+    li{
+        position: relative;
+        &::after{
+            @include m.tablet{
+                background-color: v.$color-white;
+                bottom: -0.5rem;
+                content: '';
+                height: 0.2rem;
+                left: 0;
+                position: absolute;
+                transform: scale(0);
+                transition: 0.3s ease;
+                width: 100%;
+            }
+        }
+        &:hover::after{
+            transform: scale(1);
         }
     }
 }
